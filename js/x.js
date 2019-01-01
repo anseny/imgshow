@@ -7,7 +7,7 @@ var titles = document.getElementById("title");
 var ts = titles.getElementsByTagName("div"); 
 window.onload = function imgshow(){
     header.onmouseover = function(){
-        clearInterval(timer);
+        if(timer) clearInterval(timer);
     }
     header.onmouseout = function(){
         timer = setInterval(function(){
@@ -17,25 +17,25 @@ window.onload = function imgshow(){
             } 
             //console.log(index); 
             changeimg(index);
-        },2000)
+        },1000)
     }
     for(var j = 0;j<ts.length;j++){
         ts[j].id = j;
-        ts.style.background = "white";
         ts[j].onclick = function(){
             index = this.id;
-            ts.style.background = "white";
             changeimg(index);
 
         }
     }
-
+    header.onmouseout();
 }
 function changeimg(index){
 
     for(var i = 0;i<imgs.length;i++){
         imgs[i].style.display = "none";
+        ts[i].style.background ="white";
     }
     imgs[index].style.display = "block";
+    ts[index].style.background ="#ffcc00";
 
 }

@@ -4,6 +4,9 @@
     padding:0;
     font-family: Microsoft YaHei;
 }
+.first{
+    background: #ffcc00;
+}
 .header{
     margin:0 auto;
     width:800px;
@@ -20,6 +23,7 @@
     height:50px;
     line-height:50px;
     text-align: center;
+    border-radius: 8px;
 }
 .img{
     width:800px;
