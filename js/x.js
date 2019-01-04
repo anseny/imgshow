@@ -7,7 +7,7 @@ var titles = document.getElementById("title");
 var ts = titles.getElementsByTagName("div"); 
 window.onload = function imgshow(){
     header.onmouseover = function(){
-        if(timer) clearInterval(timer);
+        if(timer) {clearInterval(timer);}
     }
     header.onmouseout = function(){
         timer = setInterval(function(){
